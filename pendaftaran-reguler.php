@@ -1,11 +1,21 @@
 <?php
 
-require_once 'pendaftaran.php';
+require_once 'Pendaftaran.php';
 
 class PendaftaranReguler extends Pendaftaran
 {
     protected $pilihanProdi;
     protected $lokasiKampus;
+
+    public function hitungTotalBiaya()
+    {
+        return $this->biayaPendaftaranDasar;
+    }
+
+    public function tampilkanInfoJalur()
+    {
+        return "Jalur Reguler";
+    }
 
     public function getDaftarReguler($db)
     {

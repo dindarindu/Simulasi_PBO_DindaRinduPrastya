@@ -7,6 +7,16 @@ class PendaftaranPrestasi extends Pendaftaran
     protected $jenisPrestasi;
     protected $tingkatPrestasi;
 
+    public function hitungTotalBiaya()
+    {
+        return $this->biayaPendaftaranDasar - 50000;
+    }
+
+    public function tampilkanInfoJalur()
+    {
+        return "Jalur Prestasi";
+    }
+
     public function getDaftarPrestasi($db)
     {
         $query = "SELECT * FROM tabel_pendaftaran
@@ -15,3 +25,4 @@ class PendaftaranPrestasi extends Pendaftaran
         return $db->query($query);
     }
 }
+?>
